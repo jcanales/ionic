@@ -1,11 +1,11 @@
-<ion-header>
+<!-- <ion-header>
   <ion-toolbar color="primary">
     <ion-title text-center>Iniciar Sesion</ion-title>
   </ion-toolbar>
-</ion-header>
+</ion-header> -->
 
-<ion-content padding>
-    <img class="icon" src="assets/icon/logo1.png" alt="">
+<!-- <ion-content padding>
+    <img class="icon" src="../../../assets/img/logo-empresa.png" alt="">
     <ion-item>
         <ion-label position="floating">Correo Electrónico</ion-label>
         <ion-input [(ngModel)]="email" type="text" name="email"></ion-input>
@@ -16,4 +16,37 @@
     </ion-item><br>
     <ion-button (click)="onSubmitLogin()" expand="block">Entrar</ion-button>
 
+</ion-content> -->
+
+
+<ion-content>
+    <div class="container-login container-login-main">
+        <div class="main-container">
+            <div class="logo">
+                <img class="logo-empresa" src="../../../assets/img/logo-empresa.png" alt="logo-empresa">
+            </div>
+            <div class="login-box">
+                <div class="title">
+                    <p><b>Login</b></p>
+                </div>
+                <ion-label>Correo Electrónico</ion-label>
+                <div class="inputs">
+                    <ion-input type="email" [(ngModel)]="email" id="txtEmail" class="input-data" id="txtEmail" maxlength="113" placeholder="Correo" required> </ion-input>
+                </div>
+                <ion-label>Contraseña</ion-label>
+                <div class="inputs">
+                    <ion-input type="password" [(ngModel)]="password" value="Submit" class="input-data" id="txtPassword" placeholder="Contraseña" required></ion-input>
+                </div>
+                <div class="boton-iniciar">
+                    <button type="submit" class="btn-Submit" (click)="onSubmitLogin()">Iniciar sesión</button>
+                    <!-- <button type="submit" class="btn-Submit-register" routerLink="/rutaregistro">Registrar</button> -->
+                </div>
+                <!-- <div class="boton-registrar">
+                </div> -->
+                <!-- <div class="inputs">
+                    <p class="ayuda">¿Olvidaste tu contraseña? <b><a>ayuda</a></b></p>
+                </div> -->
+            </div>
+        </div>
+    </div>
 </ion-content>
